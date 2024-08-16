@@ -1,16 +1,72 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-	<link rel="stylesheet" href="./styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Cart</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 50%;
+      margin-top: 20px;
+    }
+
+    table, th, td {
+      border: 1px solid black;
+      text-align: left;
+      padding: 8px;
+    }
+
+    th, td {
+      background-color: white;
+    }
+
+    input {
+      margin: 5px 10px;
+      padding: 8px;
+      font-size: 16px;
+    }
+
+    button {
+      padding: 8px 16px;
+      font-size: 16px;
+      cursor: pointer;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+    }
+
+    h3 {
+      margin-top: 20px;
+      font-size: 18px;
+    }
+  </style>
 </head>
-
 <body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
 
-</body>
+  <!-- Input Fields for Item and Price -->
+  <input type="text" id="item-name-input" placeholder="Item Name" aria-label="Item Name">
+  <input type="number" id="item-price-input" placeholder="Item Price" aria-label="Item Price">
+  <button id="add" aria-role="button">Add</button>
 
-</html>
+  <!-- Table for Shopping List -->
+  <table aria-role="table">
+    <thead>
+      <tr>
+        <th id="item">Item</th>
+        <th id="price">Price</th>
+      </tr>
+    </thead>
+   
